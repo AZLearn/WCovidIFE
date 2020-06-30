@@ -139,8 +139,10 @@ def lect_plot():
     
 
 st.title('COVID19 : Italie-Espagne-France')
-#st.title('France-Italie-Espagne')
-st.header('Evolution depuis le 22/01/2020')
+#header_aff = datetime.today().strftime('%Y-%m-%d' )+ ' : ' + 'évolution depuis le 22/01/2020'
+#st.header(header_aff)
+st.subheader(datetime.today().strftime('%Y-%m-%d' ))
+st.markdown('Evolution depuis le 22/01/2020')
 st.markdown('Chiffres cohérents avec ceux affichés sur :  https://www.eficiens.com/covid-19-statistics/')
 
 lect_plot()
