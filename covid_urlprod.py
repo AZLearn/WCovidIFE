@@ -18,7 +18,6 @@ from matplotlib import pyplot as plt
 
 
 
-
 def lect_plot():
     ###### lecture 2 fichiers .csv
     url_root = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series'
@@ -86,8 +85,12 @@ def lect_plot():
     plt.scatter(x_temps,y_nbcas_Sp,color="limegreen", label='Espagne: ' + str(maxi_nbcas_Sp) + ' cas')
     plt.scatter(x_temps,y_nbcas_FrAvecDOM,color="blue", label='France: ' + str(maxi_nbcas_FrAvecDOM) + ' cas')
     plt.title("Nombre de cas" + '\n' + datetime.today().strftime('%Y-%m-%d' ))
+       
+    plt.xlabel('jours', verticalalignment='bottom', x= 1.07)
+    #plt.text(x_temps[-1]+ 15, -28000, 'jours', fontsize=10.)    
     plt.legend()
     #plt.show()
+
     st.pyplot()
     
     #%matplotlib inline
@@ -98,6 +101,10 @@ def lect_plot():
                 + ' morts')
 
     plt.title('Nombre de morts' + '\n' + datetime.today().strftime('%Y-%m-%d' ))
+    
+    #plt.text(x_temps[-1]+ 15, -3900, 'jours', fontsize=10.)
+    plt.xlabel('jours', verticalalignment='bottom', x= 1.07)
+
     plt.legend()
     #plt.show()
     st.pyplot()
@@ -120,7 +127,11 @@ def lect_plot():
     plt.scatter(x_temps,y_nbcas_FrAvecDOM,color="blue", label='France')
     
     plt.title(datetime.today().strftime('%Y-%m-%d' ) + '\n' 
-              + 'Nb cas/ Décalage de ' + str(DECALAGE) +' jours')  
+              + 'Nb cas/ Décalage de ' + str(DECALAGE) +' jours')
+    
+    #plt.text(x_temps[-1]+ 15, -28000, 'jours', fontsize=10.)
+    plt.xlabel('jours', verticalalignment='bottom', x= 1.07)
+    
     plt.legend()
     #plt.show()
     st.pyplot()
@@ -132,6 +143,10 @@ def lect_plot():
 
     plt.title(datetime.today().strftime('%Y-%m-%d' ) + '\n' 
               + 'Nb morts/ Décalage de ' + str(DECALAGE) +' jours')
+    
+    #plt.text(x_temps[-1]+ 15, -3900, 'jours', fontsize=10.)
+    plt.xlabel('jours', verticalalignment='bottom', x= 1.07)
+    
     plt.legend()
     #plt.show()
     st.pyplot()
